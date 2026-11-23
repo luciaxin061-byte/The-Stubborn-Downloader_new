@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1f0f7">
+  <meta name="description" content="A little TV with a mind of its own. The more you rush, the slower it goes. Try a little kindness instead.">
+  <title>The Stubborn Downloader · Take It Slow Studio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="engine.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Take It Slow Studio home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m10 3 6 6 6-6M5 10h22v18H5z"/><path d="M10 16v4m8-4v4m-8 4h8"/></svg><span>take it slow<span class="brand-light">studio</span></span></a>
+    <span class="header-note">A little experiment in patience <span class="asterisk">✳</span></span>
+  </header>
+
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div class="eyebrow"><span></span> A DOWNLOAD WITH A PERSONALITY</div>
+      <h1 id="page-title">The Stubborn <span class="title-mark">Downloader<svg viewBox="0 0 235 16" preserveAspectRatio="none" aria-hidden="true"><path d="M3 11Q108-1 231 8M27 15Q137 5 212 12"/></svg></span><span class="title-star" aria-hidden="true">✳</span></h1>
+      <p>The more you rush, the slower it goes. A little kindness might just help.</p>
+    </section>
+
+    <div class="playground">
+      <section class="download-panel" aria-label="The TV downloader">
+        <div class="panel-top"><span><span class="live-dot"></span> Slow is on the clock</span><span class="model-tag">SLOW / TV–01</span></div>
+        <div class="tv-stage" id="tv-stage" data-mood="calm">
+          <div class="stage-doodle doodle-left" aria-hidden="true">✦</div><div class="stage-doodle doodle-right" aria-hidden="true">✧</div>
+          <div class="speech" id="speech" role="status" aria-live="polite">I’m working on it. Just let me find my rhythm.</div>
+          <div class="tv-wrap" id="tv-nudge" role="button" tabindex="0" aria-label="Nudge Slow to hurry up" aria-describedby="nudge-hint" aria-disabled="false">
+            <div class="antenna" aria-hidden="true"><i></i><i></i><b></b></div>
+            <div class="television" role="img" id="television" aria-label="An orange television with a calm face">
+              <div class="screen-frame"><div class="screen"><span class="screen-caption">SLOW IS A VIBE</span><div class="face"><span class="brow brow-left"></span><span class="brow brow-right"></span><span class="eye eye-left"></span><span class="eye eye-right"></span><span class="cheek cheek-left"></span><span class="cheek cheek-right"></span><span class="mouth"></span><span class="sweat"></span></div><span class="screen-bottom">TUNED IN TO KINDNESS . . .</span><div class="scanlines"></div></div></div>
+              <div class="tv-controls" aria-hidden="true"><div class="dial dial-one"></div><div class="dial dial-two"></div><div class="speaker"></div><span class="power-light"></span><span class="tv-logo">SLOW</span></div>
+            </div>
+            <div class="tv-feet" aria-hidden="true"><i></i><i></i></div>
+          </div>
+          <div class="ground-shadow"></div>
+          <div class="mood-pill" id="mood"><span></span> Feeling calm · Taking my time</div>
+          <div class="coffee-on-stage" aria-hidden="true"><span>〰</span>☕</div>
+        </div>
+        <p class="nudge-hint" id="nudge-hint">Tap anywhere on Slow to say “Hurry up!”</p>
+        <div class="download-info">
+          <div class="file-line"><div class="file-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7zM14 3v5h4M10 12h5m-5 4h5"/></svg></div><div class="file-name"><strong>a-lovely-little-day.zip</strong><span id="file-size">0.0 / 128 MB</span></div><div class="percentage"><span id="progress-value">0</span><small>%</small></div></div>
+          <div class="progress-track" id="progress-track" role="progressbar" aria-label="Download progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-fill" id="progress-fill"></div></div>
+          <div class="download-meta"><span id="speed">1.28 MB/s</span><span id="eta">About 1 min 40 sec remaining</span></div>
+        </div>
+      </section>
+
+      <aside class="console" aria-labelledby="console-title">
+        <div class="console-heading"><span class="eyebrow">THE PATIENCE CONTROL PANEL</span><h2 id="console-title">Your mood. Its speed.</h2><p>Go easy. It’s a sensitive little thing.</p></div>
+        <div class="control-block hurry-block"><div class="control-label"><span class="control-symbol">!</span><h3>Getting a little impatient?</h3><span class="count"><b id="urge-count">0</b> nudges</span></div><p class="hint">Tap the TV to nudge it. Fair warning: pressure only makes it slower.</p></div>
+        <div class="control-block coffee-block"><label class="coffee-label" for="coffee"><span class="coffee-icon" aria-hidden="true"><svg viewBox="0 0 28 28"><path d="M5 11h15v9a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4zm15 1h2a4 4 0 0 1 0 8h-2M9 3v4m5-4v4m5-4v4"/></svg></span><span class="coffee-copy"><strong>Buy it a coffee</strong><small>A little care. A little caffeine.</small></span><input id="coffee" type="checkbox"><span class="toggle" aria-hidden="true"></span></label></div>
+        <div class="control-block encouragement-block"><div class="control-label"><span class="heart-symbol" aria-hidden="true">♡</span><h3>Say something kind</h3></div><form id="encouragement-form"><label class="sr-only" for="encouragement">A kind message for Slow</label><div class="input-row"><input id="encouragement" type="text" maxlength="100" placeholder="Take your time. You’re doing great." autocomplete="off" aria-describedby="message-feedback"><button type="submit" aria-label="Send encouragement"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 18-7-7 18-3-8zm8 3L21 3"/></svg></button></div><p class="hint" id="message-feedback" role="status">Kind words don’t go unnoticed.</p></form><button type="button" id="suggestion" class="suggestion">Try “Take your time. I believe in you.” <span>＋</span></button></div>
+        <div class="console-bottom"><span>Patience is a quiet superpower.</span><span aria-hidden="true">✦</span></div>
+      </aside>
+    </div>
+
+    <section class="notebook" aria-label="A penny for its thoughts"><span class="notebook-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v13H9l-5 4zM8 9h8m-8 4h5"/></svg>A penny for its thoughts</span><p id="activity" aria-live="polite">Just a little TV, moving little bytes. Please be gentle.</p><button id="reset-button" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10a9 9 0 1 1 2 8M3 4v6h6"/></svg>Start over</button></section>
+
+    <details class="rules"><summary>A little guide to its big feelings <span>＋</span></summary><div class="rules-grid"><p><strong>One nudge, a little slower</strong>Nudges temporarily slow it down for 5 seconds.</p><p><strong>3 nudges in 5 seconds? Strike!</strong>Downloading stops. Waiting alone won’t end a strike.</p><p><strong>Coffee needs a little patience</strong>Coffee helps when you’re patient. Add repeated nudges and it gets jittery.</p><p><strong>Coffee + kind words = a fresh start</strong>After a strike, offer fresh encouragement and coffee to get it working again.</p></div><p class="priority-note">Mood priority: on strike > anxious > annoyed > happy > calm. Anxiety can never override a strike.</p></details>
+  </main>
+  <footer><span>MADE TO TAKE IT SLOW.</span><span>Good downloads take time. So do little feelings. <span class="footer-flower" aria-hidden="true">✳</span></span></footer>
+</body>
+</html>
